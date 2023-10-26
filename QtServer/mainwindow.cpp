@@ -68,4 +68,5 @@ void MainWindow::on_sendMsg_clicked()
     QString msg = ui->msg->toPlainText();
     m_tcp->write(msg.toUtf8());
     ui->record->append("服务器say:" + msg);
+    ui->msg->setText("");
 }
